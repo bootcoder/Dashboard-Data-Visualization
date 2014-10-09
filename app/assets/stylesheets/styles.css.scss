@@ -6,7 +6,6 @@
 Imports
 ================================= */
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800);
-@import url('font-awesome.min.css');
 
 /* ================================
 General
@@ -80,7 +79,7 @@ button.navbar-toggle {
 	color: #fff;
 }
 
-.btn-theme,.btn-theme:hover,.btn-theme:focus{
+.btn-theme,.btn-theme:focus{
 	color: #fff;
 }
 .btn-theme:hover{
@@ -463,6 +462,10 @@ more media queries
 	float: right;
 }
 
+.float-left {
+	float: left;
+}
+
 .window {
 	display: none;
 }
@@ -481,13 +484,13 @@ more media queries
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 200px;
     width: 0;
     height: 100%;
     margin-left: -250px;
@@ -500,7 +503,7 @@ more media queries
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
 }
 
 #page-content-wrapper {
@@ -510,7 +513,7 @@ more media queries
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -200px;
 }
 
 /* Sidebar Styles */
@@ -518,7 +521,7 @@ more media queries
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -563,7 +566,7 @@ more media queries
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 200px;
     }
 
     #wrapper.toggled {
@@ -571,7 +574,7 @@ more media queries
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
