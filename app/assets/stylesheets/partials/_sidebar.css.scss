@@ -1,35 +1,43 @@
 /*SIMPLE SIDEBAR CSS*/
 
+// Variables
+
+$sideBar_Width: 200px;
+$sideBar_TransitionTime: 0.5s;
+$sideBar_TextIndent: 20px;
+$sideBar_LineHeight: 40px;
+
 
 #wrapper {
     padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all $sideBar_TransitionTime ease;
+    -moz-transition: all $sideBar_TransitionTime ease;
+    -o-transition: all $sideBar_TransitionTime ease;
+    transition: all $sideBar_TransitionTime ease;
 }
 
 #wrapper.toggled {
-    padding-left: 200px;
+    padding-left: $sideBar_Width;
 }
+
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 200px;
+    left: $sideBar_Width;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -$sideBar_Width;
     overflow-y: auto;
     background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all $sideBar_TransitionTime ease;
+    -moz-transition: all $sideBar_TransitionTime ease;
+    -o-transition: all $sideBar_TransitionTime ease;
+    transition: all $sideBar_TransitionTime ease;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 200px;
+    width: $sideBar_Width;
 }
 
 #page-content-wrapper {
@@ -39,7 +47,7 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -200px;
+    margin-right: -$sideBar_Width;
 }
 
 /* Sidebar Styles */
@@ -47,15 +55,15 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 200px;
+    width: $sideBar_Width;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    text-indent: $sideBar_TextIndent;
+    line-height: $sideBar_LineHeight;
 }
 
 .sidebar-nav li a {
@@ -78,7 +86,7 @@
 .sidebar-nav > .sidebar-brand {
     height: 65px;
     font-size: 18px;
-    line-height: 60px;
+    line-height: $sideBar_LineHeight;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -92,7 +100,7 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 200px;
+        padding-left: $sideBar_Width;
     }
 
     #wrapper.toggled {
@@ -100,7 +108,7 @@
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: $sideBar_Width;
     }
 
     #wrapper.toggled #sidebar-wrapper {
