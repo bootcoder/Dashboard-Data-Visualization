@@ -24,17 +24,20 @@
 <body>
 
   <div class="container">
-  	<%= render partial: "layouts/header"  %>
-    <%= yield %>
+  	<div id="wrapper">
+	  	<%= render partial: "layouts/header"  %>
+			<%= render partial: "layouts/sidebar" %>
+	    <%= yield %>
+	  </div>
   </div>
   
   <script src="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js"></script>
   <!-- Menu Toggle Script -->
 	<script>
-	$("#menu-toggle").click(function(e) {
-	e.preventDefault();
-	$("#wrapper").toggleClass("toggled");
-	});
-</script>
+		$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+		});
+	</script>
 </body>
 </html>
