@@ -27,13 +27,15 @@
   	<div id="wrapper">
       <%= render partial: "layouts/sidebar" %>
       <div id="">
-  	  	<%= render partial: "layouts/header"  %>
+        <%= render partial: "layouts/header"  %>
+  	  	<%= render partial: "nav_stats"  %>
   	    <%= yield %>
       </div>
 	  </div>
   
   
   <script src="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <!-- Menu Toggle Script -->
 	<script>
 		$("#menu-toggle").click(function(e) {
